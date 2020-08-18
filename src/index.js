@@ -43,7 +43,7 @@ const element3 = (
     </div>
 );
 
-ReactDOM.render(element3, document.getElementById('exp-3'));
+ReactDOM.render(element3, document.getElementById('exp-3.1'));
 
 const styles = {
     fontSize: '30px',
@@ -130,7 +130,7 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('exp-8'));
+ReactDOM.render(<App/>, document.getElementById('exp-8.1'));
 
 class MyProps extends React.Component {
     render() {
