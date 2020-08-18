@@ -4,6 +4,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import PropTypes from 'prop-types';
 import {Clock} from "./Lesson2";
+import * as l3 from "./Lesson3";
 
 const jsx = 'from jsx';
 const element = <h2>Hello world {jsx}!</h2>;
@@ -206,6 +207,23 @@ PropsValid.defaultProps = {
 ReactDOM.render(<PropsValid/>, document.getElementById('exp-11'));
 
 ReactDOM.render(<Clock/>, document.getElementById('exp-12'));
+
+/* lesson 2 */
+ReactDOM.render(<l3.LifecycleMethods/>, document.getElementById('exp-13'));
+ReactDOM.render(<l3.App/>, document.getElementById('exp-14'));
+ReactDOM.render(<l3.Toggle/>, document.getElementById('exp-15'));
+ReactDOM.render(<l3.ActionLink/>, document.getElementById('exp-16'));
+ReactDOM.render(<l3.Handler1/>, document.getElementById('exp-17'));
+ReactDOM.render(<l3.Handler2/>, document.getElementById('exp-18'));
+ReactDOM.render(<l3.Child/>, document.getElementById('exp-19'));
+ReactDOM.render(<l3.App1/>, document.getElementById('exp-20'));
+ReactDOM.render(<l3.App2/>, document.getElementById('exp-21'));
+ReactDOM.render(<l3.App3/>, document.getElementById('exp-22'));
+ReactDOM.render(<l3.DefaultDate/>, document.getElementById('exp-23'));
+ReactDOM.render(<l3.App4/>, document.getElementById('exp-24'));
+ReactDOM.render(<l3.Greeting/>, document.getElementById('exp-25'));
+ReactDOM.render(<l3.LoginControl/>, document.getElementById('exp-26'));
+ReactDOM.render(<l3.Page/>, document.getElementById('exp-27'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
