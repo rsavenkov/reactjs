@@ -5,6 +5,8 @@ import * as serviceWorker from './serviceWorker';
 import PropTypes from 'prop-types';
 import {Clock} from "./Lesson2";
 import * as l3 from "./Lesson3";
+import * as l4 from "./Lesson4";
+import {routing} from "./Lesson4";
 
 const jsx = 'from jsx';
 const element = <h2>Hello world {jsx}!</h2>;
@@ -208,7 +210,7 @@ ReactDOM.render(<PropsValid/>, document.getElementById('exp-11'));
 
 ReactDOM.render(<Clock/>, document.getElementById('exp-12'));
 
-/* lesson 2 */
+/* lesson 3 */
 ReactDOM.render(<l3.LifecycleMethods/>, document.getElementById('exp-13'));
 ReactDOM.render(<l3.App/>, document.getElementById('exp-14'));
 ReactDOM.render(<l3.Toggle/>, document.getElementById('exp-15'));
@@ -224,6 +226,22 @@ ReactDOM.render(<l3.App4/>, document.getElementById('exp-24'));
 ReactDOM.render(<l3.Greeting isLoggedIn={false}/>, document.getElementById('exp-25'));
 ReactDOM.render(<l3.LoginControl/>, document.getElementById('exp-26'));
 ReactDOM.render(<l3.Page/>, document.getElementById('exp-27'));
+
+/* lesson 4 */
+ReactDOM.render(<ul>{l4.listItems}</ul>, document.getElementById('exp-28'));
+ReactDOM.render(<l4.NumberList numbers={['a', 'b', 'c', 'd', 'e']} />, document.getElementById('exp-29'));
+ReactDOM.render(<l4.NumberList1 numbers={[5, 4, 3, 2, 1]}/>, document.getElementById('exp-30'));
+ReactDOM.render(<l4.NumberList2 numbers={['e', 'd', 'c', 'b', 'a']}/>, document.getElementById('exp-31'));
+ReactDOM.render(<l4.App />, document.getElementById('exp-32'));
+ReactDOM.render(<l4.NameForm />, document.getElementById('exp-33'));
+ReactDOM.render(<l4.EssayForm />, document.getElementById('exp-34'));
+ReactDOM.render(<l4.FlavorForm />, document.getElementById('exp-35'));
+ReactDOM.render(<l4.Reservation />, document.getElementById('exp-36'));
+ReactDOM.render(<l4.NameForm1 />, document.getElementById('exp-37'));
+ReactDOM.render(<l4.NameForm2 />, document.getElementById('exp-38'));
+ReactDOM.render(<l4.FileInput />, document.getElementById('exp-39'));
+ReactDOM.render(<l4.Menu/>, document.getElementById('exp-40'));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
