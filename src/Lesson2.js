@@ -1,14 +1,23 @@
 import React from 'react';
 
-const colors = ['red', 'green', 'blue', 'orange', 'grey', 'green', 'yellow', 'purple', 'white', 'marine'];
+const colors = ['red', 'green', 'blue', 'orange',
+    'grey', 'green', 'yellow', 'purple', 'white', 'marine'];
 
 class Clock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             date: new Date(),
-            color: colors[0]
+            color: colors[0],
+            isRunning: true
         };
+
+    }
+
+    startStop() {
+        this.setState({
+            isRunning: !this.state.isRunning
+        })
     }
 
     componentDidMount() {
@@ -23,10 +32,12 @@ class Clock extends React.Component {
     }
 
     tick() {
-        this.setState({
-            date: new Date(),
-            color: colors[Math.floor(Math.random() * 10)]
-        });
+        if (this.state.isRunning) {
+            this.setState({
+                date: new Date(),
+                color: colors[Math.floor(Math.random() * 10)]
+            });
+        }
     }
 
     render() {
@@ -34,6 +45,7 @@ class Clock extends React.Component {
             <div style={{backgroundColor: this.state.color}}>
                 <h1>Hello from clock example</h1>
                 <h2>Time is {this.state.date.toLocaleTimeString()}</h2>
+                <button onClick={() => this.startStop()}>{ this.state.isRunning ? 'Stop' : 'Start' }</button>
             </div>
         );
     }

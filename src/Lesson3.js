@@ -125,7 +125,6 @@ class Handler2 extends React.Component {
         this.setState({data: 'Data updated...'})
     }
 
-    
     render() {
         return (
             <div>
@@ -140,7 +139,7 @@ class Parent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: 'Initial data...'
+            data: 'Initial data from parent...'
         }
         this.updateState = this.updateState.bind(this);
     };
@@ -160,7 +159,7 @@ class Child extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.props.updateStateProp}>CLICK</button>
+                <button onClick={this.props.updateStateProp}>CLICK CHILD</button>
                 <h3>{this.props.myDataProp}</h3>
             </div>
         );
