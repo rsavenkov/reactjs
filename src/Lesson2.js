@@ -9,7 +9,8 @@ class Clock extends React.Component {
         this.state = {
             date: new Date(),
             color: colors[0],
-            isRunning: true
+            isRunning: true,
+            millis: new Date().getTime() + 1000
         };
 
     }
@@ -34,8 +35,9 @@ class Clock extends React.Component {
     tick() {
         if (this.state.isRunning) {
             this.setState({
-                date: new Date(),
-                color: colors[Math.floor(Math.random() * 10)]
+                date: new Date(this.state.millis),
+                color: colors[Math.floor(Math.random() * 10)],
+                millis: this.state.millis + 1000
             });
         }
     }
