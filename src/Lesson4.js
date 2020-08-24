@@ -271,14 +271,19 @@ class FileInput extends React.Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-        alert(`Selected file - ${this.fileInput.current.files[0].name}`);
+        let message = '';
+        const files = this.fileInput.current.files;
+        for (let i = 0; i < files.length; i++) {
+            message += files[i].name + ', ';
+        }
+        alert(`Selected file - ${message}`);
     }
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} >
                 <label>
                     Upload file:
-                    <input type="file" ref={this.fileInput} />
+                    <input type="file" ref={this.fileInput} multiple="true"/>
                 </label>
                 <br />
                 <button type="submit">Submit</button>
@@ -327,10 +332,25 @@ class Menu extends React.Component {
     }
 }
 
+const sections = [
+    {link: '/link-1', label: 'label-1'},
+    {link: '/link-2', label: 'label-2'},
+    {link: '/link-3', label: 'label-3'},
+];
+
 const routing = (
     <Router>
         <div>
-            <ul>
+                <ul>
+                    { sections.map((section, ind) => {
+                        return (
+                            <li key={ind}>
+                                <Link to={section.link}>{section.label}</Link>
+                            </li>
+                        )
+                    })}
+                </ul>
+            {/*<ul>
                 <li>
                     <Link to="/home">Home</Link>
                 </li>
@@ -340,10 +360,12 @@ const routing = (
                 <li>
                     <Link to="/contact">Contact</Link>
                 </li>
-            </ul>
-            <Route path="/home" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
+            </ul>*/}
+            <div style={{backgroundColor: 'red'}}>
+                <Route path={sections[0].link} component={Home} />
+                <Route path={sections[1].link} component={About} />
+                <Route path={sections[2].link} component={Contact} />
+            </div>
         </div>
     </Router>
 )
