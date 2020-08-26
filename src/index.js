@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import {Clock} from "./Lesson2";
 import * as l3 from "./Lesson3";
 import * as l4 from "./Lesson4";
+import * as l5 from "./Lesson5";
 import {routing} from "./Lesson4";
 
 const jsx = 'from jsx';
@@ -242,6 +243,15 @@ ReactDOM.render(<l4.NameForm2 />, document.getElementById('exp-38'));
 ReactDOM.render(<l4.FileInput />, document.getElementById('exp-39'));
 ReactDOM.render(<l4.Menu/>, document.getElementById('exp-40'));
 
+/* lesson 5 */
+ReactDOM.render(<l5.CountryList/>, document.getElementById('exp-41'));
+ReactDOM.render(<l5.Searcher/>, document.getElementById('exp-42'));
+ReactDOM.render(<l5.MyComponent/>, document.getElementById('exp-43'));
+ReactDOM.render(<l5.Context1/>, document.getElementById('exp-44'));
+ReactDOM.render(<l5.Context2/>, document.getElementById('exp-45'));
+ReactDOM.render(<l5.Table/>, document.getElementById('exp-46'));
+ReactDOM.render(<l5.MouseTracker/>, document.getElementById('exp-47'));
+ReactDOM.render(<l5.AutoFocusTextInput/>, document.getElementById('exp-48'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
