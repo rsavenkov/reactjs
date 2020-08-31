@@ -7,6 +7,7 @@ import {Clock} from "./Lesson2";
 import * as l3 from "./Lesson3";
 import * as l4 from "./Lesson4";
 import * as l5 from "./Lesson5";
+import * as l6 from "./Lesson6";
 import {routing} from "./Lesson4";
 
 const jsx = 'from jsx';
@@ -252,6 +253,11 @@ ReactDOM.render(<l5.Context2/>, document.getElementById('exp-45'));
 ReactDOM.render(<l5.Table/>, document.getElementById('exp-46'));
 ReactDOM.render(<l5.MouseTracker/>, document.getElementById('exp-47'));
 ReactDOM.render(<l5.AutoFocusTextInput/>, document.getElementById('exp-48'));
+
+/* lesson 5 */
+ReactDOM.render(<l6.Example1/>, document.getElementById('exp-50'));
+ReactDOM.render(<l6.Example2/>, document.getElementById('exp-51'));
+ReactDOM.render(<l6.Profiling/>, document.getElementById('exp-52'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
