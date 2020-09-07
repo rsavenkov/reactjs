@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 
 const numbers = [1, 2, 3, 4, 5]
 export const listItems = numbers.map((number) =>
@@ -172,6 +173,46 @@ class FlavorForm extends React.Component {
         );
     }
 }
+
+function AppHook() {
+
+    const [exp, setExp] = useState('');
+    const [expReq, setExpReq] = useState('');
+
+    function onSubmit1(e) {
+        // console.log(e);
+        e.preventDefault();
+    }
+
+    return (
+        <form onSubmit={(e) => onSubmit1(e)}>
+            <input name="example" defaultValue="test1" onChange={(e) => setExp(e.target.value)}/>
+            <input name="exampleRequired" onChange={(e) => setExpReq(e.target.value)}/>
+            <input type="submit" />
+        </form>
+    );
+
+}
+function AppHookForm() {
+
+    const { register, handleSubmit, watch, errors } = useForm();
+
+    console.log(watch("example")); // watch input value by passing the name of it
+
+    const onSubmit = (data) => {
+        console.log(data);
+    }
+
+    return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+        <input name="example" defaultValue="test" ref={register} />
+        <input name="exampleRequired" ref={register({ required: true })} />
+        {errors.exampleRequired && <span>This field is required</span>}
+        <input type="submit" />
+    </form>
+    );
+}
+
 
 class Reservation extends React.Component {
     constructor(props) {
@@ -370,4 +411,4 @@ const routing = (
     </Router>
 )
 
-export { NumberList, NumberList1, NumberList2, App, NameForm, EssayForm, FlavorForm, Reservation, NameForm1, NameForm2, FileInput, Menu }
+export { NumberList, NumberList1, NumberList2, App, NameForm, EssayForm, FlavorForm, Reservation, NameForm1, NameForm2, FileInput, Menu, AppHookForm, AppHook }

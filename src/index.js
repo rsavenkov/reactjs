@@ -241,8 +241,10 @@ ReactDOM.render(<l4.FlavorForm />, document.getElementById('exp-35'));
 ReactDOM.render(<l4.Reservation />, document.getElementById('exp-36'));
 ReactDOM.render(<l4.NameForm1 />, document.getElementById('exp-37'));
 ReactDOM.render(<l4.NameForm2 />, document.getElementById('exp-38'));
-ReactDOM.render(<l4.FileInput />, document.getElementById('exp-39'));
-ReactDOM.render(<l4.Menu/>, document.getElementById('exp-40'));
+// ReactDOM.render(<l4.FileInput />, document.getElementById('exp-39'));
+// ReactDOM.render(<l4.Menu/>, document.getElementById('exp-40'));
+ReactDOM.render(<l4.App/>, document.getElementById('exp-39'));
+ReactDOM.render(<l4.AppHook/>, document.getElementById('exp-40'));
 
 /* lesson 5 */
 ReactDOM.render(<l5.CountryList/>, document.getElementById('exp-41'));
